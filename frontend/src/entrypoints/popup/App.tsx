@@ -1,8 +1,7 @@
 import { useState } from "react";
-import wxtLogo from "@/assets/wxt.svg";
-import reactLogo from "@/assets/react.svg";
+import wxtLogo from "/assets/wxt.svg";
+import reactLogo from "/assets/react.svg";
 import "./App.css";
-import React from "react";
 
 const App = () => {
   const [count, setCount] = useState(0);
