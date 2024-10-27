@@ -1,5 +1,4 @@
-import { injectButton } from "@/scripts/injected/button";
-import { injectButtonRequestSchema } from "@/types/scripts/injected/button";
+import createButton from "@/scripts/injected/button";
 
 const HACKERRANK_BASE_URL = "https://www.hackerrank.com/challenges";
 const TESTING_URL = "https://www.google.com";
@@ -18,10 +17,5 @@ export default defineUnlistedScript(async () => {
       return;
   }
 
-  const injectButtonRequest = injectButtonRequestSchema.parse({
-    injectedScript: async () => {
-      console.log("Injected script");
-    },
-  });
-  await injectButton(injectButtonRequest);
+  await createButton();
 });
