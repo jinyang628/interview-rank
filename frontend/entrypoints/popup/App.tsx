@@ -1,32 +1,24 @@
-import { useState } from 'react';
-import wxtLogo from '../../public/wxt.svg';
-import reactLogo from '@/assets/react.svg';
-import './App.css';
+import { useState } from "react";
+import wxtLogo from "../../public/wxt.svg";
+import reactLogo from "@/assets/react.svg";
+import "./App.css";
 
 const App = () => {
-	const [count, setCount] = useState(0);
+  const [count, setCount] = useState(0);
 
-	return (
+  return (
     <>
       <div>
-        <a href="https://wxt.dev"
-	target="_blank"
-	rel="noreferrer">
-          <img src={wxtLogo}
-	className="logo"
-	alt="WXT logo" />
+        <a href="https://wxt.dev" target="_blank" rel="noreferrer">
+          <img src={wxtLogo} className="logo" alt="WXT logo" />
         </a>
-        <a href="https://react.dev"
-	target="_blank"
-	rel="noreferrer">
-          <img src={reactLogo}
-	className="logo react"
-	alt="React logo" />
+        <a href="https://react.dev" target="_blank" rel="noreferrer">
+          <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
       <h1>WXT + React</h1>
       <div className="card">
-        <button onClick={() => setCount(previous => previous + 1)}>
+        <button onClick={() => setCount((previous) => previous + 1)}>
           count is {count}
         </button>
         <p>
@@ -37,7 +29,7 @@ const App = () => {
         Click on the WXT and React logos to learn more
       </p>
     </>
-	);
+  );
 };
 
 export default App;

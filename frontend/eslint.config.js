@@ -1,25 +1,25 @@
 // @ts-check
 
-import { defineConfig, pvtnbr } from 'lintroll';
+import { defineConfig, pvtnbr } from "lintroll";
 
 export default defineConfig([
-	{
-		ignores: [
-			'tests/fixtures/**/*',
-			'node_modules/**/*',
-			'chrome-mv3/**/*',
-			'.wxt/**/*',
-			'.output/**/*',
-		],
-	},
+  {
+    ignores: [
+      "tests/fixtures/**/*",
+      "node_modules/**/*",
+      "chrome-mv3/**/*",
+      ".wxt/**/*",
+      ".output/**/*",
+    ],
+  },
 
-	...pvtnbr({
-		node: true,
-	}),
+  ...pvtnbr({
+    node: true,
+  }),
 
-	{
-		rules: {
-			'unicorn/filename-case': 'off',
-		},
-	},
+  {
+    rules: {
+      "unicorn/filename-case": "off",
+    },
+  },
 ]);

@@ -88,7 +88,7 @@ jobs:
 
       - name: Run Prettier
         working-directory: ./frontend
-        run: npx prettier --check .
+        run: pnpx prettier --check .
 
     #   - name: Run Jest tests
     #     working-directory: ./frontend
