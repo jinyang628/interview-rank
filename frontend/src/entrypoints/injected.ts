@@ -1,5 +1,5 @@
 import { injectButton } from "@/scripts/injected/button";
-import { injectButtonRequestSchema } from "@/types/scripts/base";
+import { injectButtonRequestSchema } from "@/types/scripts/injected/button";
 
 const HACKERRANK_BASE_URL = "https://www.hackerrank.com/challenges";
 const TESTING_URL = "https://www.google.com";

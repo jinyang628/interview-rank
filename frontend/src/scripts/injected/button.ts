@@ -1,4 +1,4 @@
-import { InjectButtonRequest } from "@/types/scripts/base";
+import { InjectButtonRequest } from "@/types/scripts/injected/button";
 import { logoBase64 } from "@/constants/logoBase64";
 
 const createButton = (onClick: () => Promise<void>) => {
