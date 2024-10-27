@@ -69,7 +69,14 @@ export default async function createButton() {
       console.error("Editor content cant be found");
       return;
     }
-    console.log(challengeName, editorContent);
+
+    // TODO: Figure out what is the best way to capture the image-based content
+    // const challengeBody: string | null = extractChallengeBody();
+    // if (!challengeBody) {
+    //   console.error("Challenge body cant be found");
+    //   return;
+    // }
+    // console.log(challengeBody);
   });
 
   document.body.appendChild(container);
@@ -90,6 +97,24 @@ function extractEditorContent(): string | null {
   }
   const divs = editorContainer.querySelectorAll("div");
   const contentArray = Array.from(divs).map((div) => div.textContent || "");
+  const formattedContent = contentArray.join("\n");
+  return formattedContent;
+}
+
+function extractChallengeBody(): string | null {
+  const challengeBody = document.querySelector(".challenge-body-html");
+  if (!challengeBody) {
+    console.error("Challenge body not found");
+    return null;
+  }
+  const divs = challengeBody.querySelectorAll("div");
+  divs.forEach((div) => {
+    const styleElements = div.querySelectorAll("style");
+    styleElements.forEach((style) => style.remove());
+  });
+
+  const contentArray = Array.from(divs).map((div) => div.textContent || "");
+
   const formattedContent = contentArray.join("\n");
   return formattedContent;
 }
