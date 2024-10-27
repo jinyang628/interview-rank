@@ -1,5 +1,5 @@
 import { useState } from "react";
-import wxtLogo from "../../public/wxt.svg";
+import wxtLogo from "@/wxt.svg";
 import reactLogo from "@/assets/react.svg";
 import "./App.css";
 

@@ -34,7 +34,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.12.1'
+          python-version: "3.12.1"
 
       - name: Install Poetry
         run: |
@@ -45,21 +45,19 @@ jobs:
         run: |
           poetry install --no-interaction --no-root
 
-
       - name: Run isort
         working-directory: ./backend
         run: |
-            poetry run isort --check-only --diff .
-    
+          poetry run isort --check-only --diff .
+
       - name: Run black
         working-directory: ./backend
         run: |
-            poetry run black --check --diff .
+          poetry run black --check --diff .
 
     #   - name: Run tests
     #     working-directory: ./backend
     #     run: pytest
-
 
   frontend-CI:
     needs: file-changes
@@ -73,7 +71,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '20'
+          node-version: "20"
 
       - name: Install pnpm
         run: npm install -g pnpm
